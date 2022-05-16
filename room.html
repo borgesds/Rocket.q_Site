@@ -14,12 +14,14 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="room" class="content">
         <header>
-            <img src="assets/logo.svg" alt="logo Rocket.q">
+            <a href="#">
+                <img src="assets/logo.svg" alt="logo Rocket.q">
+            </a>
 
             <div class="buttons">
 
@@ -28,11 +30,28 @@
                     <img src="assets/copy.svg" alt="Copias numero da sala">
                 </div>
 
-                <a href="#">
-                    <img src="assets/users-white.svg" alt="Criar uma sala">
+                <a href="#" class="button">
+                    <img src="assets/users-white.svg" alt="Criar uma sala">Criar sala
                 </a>
             </div>
         </header>
+
+        <main>
+            <div id="question-form">
+                <h2>Faça sua pergunta</h2>
+                <form action="">
+                    <label class="sr-only" for="question">O que você quer perguntar?</label>
+                    <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+
+                    <footer>
+                        <div>
+                            <img src="assets/lock.svg" alt="Cadeado">Esta pergunta é anônima
+                        </div>
+                        <button>Enviar</button>
+                    </footer>
+                </form>
+            </div>
+        </main>
     </div>
 </body>
 </html>
