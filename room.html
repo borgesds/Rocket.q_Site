@@ -37,7 +37,7 @@
         </header>
 
         <main>
-            <div id="question-form">
+            <section id="question-form">
                 <h2>Faça sua pergunta</h2>
                 <form action="">
                     <label class="sr-only" for="question">O que você quer perguntar?</label>
@@ -50,7 +50,33 @@
                         <button>Enviar</button>
                     </footer>
                 </form>
-            </div>
+            </section>
+
+            <section class="question">
+                <h2 class="sr-only">Perguntas da comunidade</h2>
+                <div class="questions">
+                    <div class="question-wrapper">
+                        <div class="question-content">
+                            <div class="user">
+                                <img src="assets/Avatar.svg" alt="Avatar">
+                            </div>
+                            <div class="question">
+                                <p>Qual a diferença entre const, var e let dentro do JavaScript?</p>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <a href="#" class="check">
+                                <img src="assets/check.svg" alt="Marcar como lida">
+                                Marcar como lida
+                            </a>
+                            <a href="#" class="delete">
+                                <img src="assets/trash.svg" alt="Excluir">
+                                Excluir
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 </body>
