@@ -18,7 +18,8 @@ html {
 
     --gray-dark: #4D5E77;
     --gray-blue: #A1B2CD;
-    --gray-dark: #E5EAF1;
+    --gray-light: #E5EAF1;
+    --gray-medium: #eaecf2;
 
     font-size: 62.5%; /* 10px */
 }
@@ -85,8 +86,7 @@ button:hover, .button:hover {
 
 button > img,
 .button > img {
-    margin-left: 1rem;
-    width: 2rem;
+    margin: 1rem;
 }
 
 button.outlined,
