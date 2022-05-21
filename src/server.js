@@ -16,6 +16,9 @@ server.use(express.static("public"))
 // caminho da pasta do projeto
 server.set('views', path.join(__dirname, 'views'))
 
+// config middle
+server.use(express.urlencoded({extended: true}))
+
 // usar o arquivo route
 server.use(route)
 
