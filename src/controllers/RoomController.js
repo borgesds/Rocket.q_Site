@@ -1,3 +1,6 @@
 module.exports = {
-    create() {}
+    create(req, res) {
+
+        res.redirect(`/room/${roomId}`)
+    }
 }

@@ -40,7 +40,7 @@ function handleClick(event, check = true) {
 
     //Pegar form para colar rota para excluir ou marcar como lida = route.post('/room/:room/:question/:action')
     const form = document.querySelector(".modal form")
-    form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`)
+    form.setAttribute("action", `/question/${roomId}/${questionId}/${slug}`)
 
 
 

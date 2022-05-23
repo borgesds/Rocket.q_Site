@@ -14,7 +14,7 @@ route.get('/create-pass', (req, res) => res.render("index", {page: 'create-pass'
 route.get('/room/:room', (req, res) => res.render("room"))
 
 //Rota marcar ou excluir ('/arquivo/num.sala/pergunta/check ou delete'). Formato de dentro da modal que tem que passar informação:
-route.post('/room/:room/:question/:action', QuestionController.index)
+route.post('/question/:room/:question/:action', QuestionController.index)
 route.post('/room/create-room', RoomController.create)
 
 // exportar o route
