@@ -35,5 +35,16 @@ module.exports = {
         await db.close()
 
         res.redirect(`/room/${roomId}`)
+    },
+
+    // Buscando Id da sala e as perguntas
+   async open(req, res) {
+        const roomId = req.params.room;
+    
+        // Buscar a perguntas
+        const question = await db.all(`SELECT * FROM questions WHERE room = ${roomId}`)
+
+        res.render("room", {roomId: roomId, question: questions})
     }
 }
+
