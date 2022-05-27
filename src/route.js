@@ -14,6 +14,7 @@ route.get('/create-pass', (req, res) => res.render("index", {page: 'create-pass'
 // Criar e abrir uma sala
 route.post('/create-room', RoomController.create)
 route.get('/room/:room', RoomController.open)
+route.post('/enterroom', RoomController.enter)
 
 // Criar rota das questões
 route.post('/question/create/:room', QuestionController.create)

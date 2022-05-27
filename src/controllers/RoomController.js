@@ -38,13 +38,22 @@ module.exports = {
     },
 
     // Buscando Id da sala e as perguntas
-   async open(req, res) {
+    async open(req, res) {
+        const db = await Database()
         const roomId = req.params.room;
     
         // Buscar a perguntas
-        const question = await db.all(`SELECT * FROM questions WHERE room = ${roomId}`)
+        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 0`)
 
-        res.render("room", {roomId: roomId, question: questions})
+        const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 1`)
+
+        res.render("room", {roomId: roomId, questions: questions, questionsRead: questionsRead})
+    },
+
+    enter(req, res) {
+        const roomId = req.body.roomId
+
+        res.redirect(`/room/${roomId}`)
     }
 }
 
